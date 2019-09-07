@@ -41,20 +41,23 @@ class ExerciseGui {
 	createExercise(exercise) {
 		var result = "<ul id='header-links'>";
 		if (exercise.getSource() != null)
-			result += "<li><a href='" + exercise.getSource() + "' target='_blank'>Exercise Source</a></li>";
-		result += "<li><a href='http://github.com/slothsoft/exercises-javascript/blob/master/src/resources/js/" + exercise.getId() + ".js' target='_blank'>Source Code</a></li>";
+			result += "<li><a href='" + exercise.getSource() + "'>Exercise Source</a></li>";
+		result += "<li><a href='http://github.com/slothsoft/exercises-javascript/blob/master/src/exercise/" + exercise.getId() + ".js'>Source Code</a></li>";
 		result += "</ul>";
 		result += "<h1>" + exercise.getDisplayName() + "</h1>";
 		result += "<p>" + exercise.getDescription() + "</p>"; 
+		result += exercise.getHtml(); 
+		
+		// hook scripts to execute the exercise
+		var head = document.getElementsByTagName("head")[0]
 
-		if (exercise.html != null)
-			result += exercise.html; 
-
-		if (exercise.script != null) {
-		    var script = document.createElement("script");
-		    script.innerHTML = 'function executeExercise() { ' + exercise.script + '}';
-		    document.getElementsByTagName("head")[0].appendChild(script);
-		} 
+		// TODO: I'd love to have the actual script tag here too
+		// (index.html around line 13)
+		
+		var executeScript = document.createElement("script");
+		executeScript.innerHTML = 'function executeExercise() { ' + exercise.script + '\n}';
+		head.appendChild(executeScript);
+		
 		return result;
 	}
 }
@@ -62,16 +65,5 @@ class ExerciseGui {
 function getExerciseUrl(exercise) {
 	return window.location.pathname + '?exercise=' + exercise.getId();
 }
-function getMethods(obj) {
-	  var result = [];
-	  for (var id in obj) {
-	    try {
-	        result.push(id + ": " + obj[id].toString());
-	    } catch (err) {
-	      result.push(id + ": inaccessible");
-	    }
-	  }
-	  return result;
-	}
 
 module.exports = ExerciseGui;

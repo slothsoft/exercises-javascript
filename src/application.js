@@ -1,32 +1,15 @@
 const ExerciseGui = require("./exercise-gui.js");
-exerciseGui = new ExerciseGui();
+const url = require('url');
 
+var exerciseGui = new ExerciseGui();
 document.getElementById('exercise-list').innerHTML = exerciseGui.createExerciseList();
 
-var urlParams = getParams(window.location.href);
-if (urlParams['exercise'] == null)
+var urlParams = url.parse(window.location.href, true).query;
+if (urlParams.exercise == null) {
+	// show a list of exercises with a short description
 	document.getElementById('selected-exercise').innerHTML = exerciseGui.createExerciseOverview();
-else  {
-	document.getElementById('selected-exercise').innerHTML = exerciseGui.createExerciseById(urlParams['exercise']);
+} else {
+	// show a specific exercise and init it
+	document.getElementById('selected-exercise').innerHTML = exerciseGui.createExerciseById(urlParams.exercise);
 	executeExercise();
 }
-	
-/**
- * Get the URL parameters
- * source: https://css-tricks.com/snippets/javascript/get-url-variables/
- * @param  {String} url The URL
- * @return {Object}     The URL parameters
- */
-
-function getParams(url) {
-	var params = {};
-	var parser = document.createElement('a');
-	parser.href = url;
-	var query = parser.search.substring(1);
-	var vars = query.split('&');
-	for (var i = 0; i < vars.length; i++) {
-		var pair = vars[i].split('=');
-		params[pair[0]] = decodeURIComponent(pair[1]);
-	}
-	return params;
-};
