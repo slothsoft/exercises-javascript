@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "A couple of programming exercises I thought would be fun to try.",
   "scripts": {
-    "bundle": "browserify src/application.js | squash > dist/resources/js/application.js && copyfiles --up 1 src/exercise/*.js dist/",
-    "watch": "watchify src/application.js -o dist/resources/js/application.js -v",
+    "bundle": "browserify src/index.js | squash > dist/resources/js/application.js && npm run copy-exercises",
+    "copy-exercises": "copyfiles --up 1 src/exercise/*.js dist/",
+    "watch": "watchify src/index.js -o dist/resources/js/application.js -v",
     "test": "qunit",
     "deploy": "npm run test && npm run bundle"
   },

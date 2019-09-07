@@ -7,10 +7,10 @@ class ExerciseImpl extends Exercise {
 
 		this.description = '<p>Write a function that takes a list of strings an prints them, one per line, in a rectangular frame. For example the list <code>["Hello", "World", "in", "a", "frame"]</code> gets printed as:</p><img src=\"resources/images/framed-words.png\"/>'
 		this.source = 'https://adriann.github.io/programming_problems.html';
-		this.script = `
-			var input = document.getElementById('input').value.split(/[\\r\\n]+/);
-			var result = executeFramedWords(input);
-			document.getElementById('output').value = result.join("\\n");`;
+		this.script = 
+			"var input = document.getElementById('input').value.split(/[\\r\\n]+/);\n"+
+			"var result = executeFramedWords(input);\n"+
+			"document.getElementById('output').value = result.join('\\n');\n";
 		this.html = `<h2>Input</h2>
 <textarea id="input" rows="4" cols="50">Hello
 World

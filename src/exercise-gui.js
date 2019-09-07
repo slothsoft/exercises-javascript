@@ -19,7 +19,9 @@ class ExerciseGui {
 
 	createExerciseList() {
 		var result = "<ul>";
-		result += "<li><a href=\"" + window.location.pathname + "\"><b>Overview</b></a></li><br>";
+		result += "<li><a href=\"" + window.location.pathname + "\"><b>Overview</b></a></li>";
+		result += "<li><a href=\"https://github.com/slothsoft/exercises-javascript/\"><b>GitHub</b></a></li>";
+		result += "<br>";
 		this.exercises.forEach(function(exercise) {
 			var a = "href=\"" + getExerciseUrl(exercise) + "\"";
 			result += "<li><a " + a + ">" + exercise.getDisplayName() + "</a></li>";
@@ -43,6 +45,7 @@ class ExerciseGui {
 		if (exercise.getSource() != null)
 			result += "<li><a href='" + exercise.getSource() + "'>Exercise Source</a></li>";
 		result += "<li><a href='http://github.com/slothsoft/exercises-javascript/blob/master/src/exercise/" + exercise.getId() + ".js'>Source Code</a></li>";
+		result += "<li><a href='http://github.com/slothsoft/exercises-javascript/blob/master/test/exercise/" + exercise.getId() + "-test.js'>Tests</a></li>";
 		result += "</ul>";
 		result += "<h1>" + exercise.getDisplayName() + "</h1>";
 		result += "<p>" + exercise.getDescription() + "</p>"; 
