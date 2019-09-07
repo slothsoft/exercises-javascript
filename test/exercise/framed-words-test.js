@@ -1,4 +1,4 @@
-var functionUnderTest = require('../src/resources/js/framed-words.js');
+var functionUnderTest = require('../../src/exercise/framed-words.js');
 
 QUnit.module("framed-words", function() {
 	QUnit.test("hello world", function(assert) {

@@ -1,13 +1,16 @@
 {
-  "name": "example-javascript-website",
+  "name": "exercises-javascript",
   "version": "1.0.0",
-  "description": "An example for setting up a static HTML website using well tested JavaScript.",
+  "description": "A couple of programming exercises I thought would be fun to try.",
   "scripts": {
-    "test": "qunit"
+    "bundle": "browserify src/application.js | squash > dist/resources/js/application.js && copyfiles --up 1 src/exercise/*.js dist/",
+    "watch": "watchify src/application.js -o dist/resources/js/application.js -v",
+    "test": "qunit",
+    "deploy": "npm run test && npm run bundle"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slothsoft/example-javascript-website"
+    "url": "git+https://github.com/slothsoft/exercises-javascript"
   },
   "keywords": [
     "example",
@@ -18,10 +21,14 @@
   "author": "Stef Schulz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/slothsoft/example-javascript-website/issues"
+    "url": "https://github.com/slothsoft/exercises-javascript/issues"
   },
-  "homepage": "https://github.com/slothsoft/example-javascript-website/blob/master/README.md",
+  "homepage": "https://github.com/slothsoft/exercises-javascript/blob/master/README.md",
   "devDependencies": {
-    "qunit": "^2.9.2"
-  }
+    "butternut": "^0.4.6",
+    "copyfiles": "^2.1.1",
+    "qunit": "^2.9.2",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {}
 }
