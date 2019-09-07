@@ -1,0 +1,27 @@
+{
+  "name": "example-javascript-website",
+  "version": "1.0.0",
+  "description": "An example for setting up a static HTML website using well tested JavaScript.",
+  "scripts": {
+    "test": "qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slothsoft/example-javascript-website"
+  },
+  "keywords": [
+    "example",
+    "html",
+    "javascript",
+    "website"
+  ],
+  "author": "Stef Schulz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slothsoft/example-javascript-website/issues"
+  },
+  "homepage": "https://github.com/slothsoft/example-javascript-website/blob/master/README.md",
+  "devDependencies": {
+    "qunit": "^2.9.2"
+  }
+}

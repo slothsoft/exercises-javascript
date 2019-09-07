@@ -1,0 +1,71 @@
+body {
+	font-size: 10pt;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: black;
+	line-height: 14pt;
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 5pt;
+}
+
+h1 {
+	font-size: 14pt;
+	font-weight: bold;
+	line-height: 20pt;
+}
+
+h2 {
+	font-size: 12pt;
+	font-weight: bold;
+	line-height: 16pt;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #8094d6;
+}
+
+a:hover, a:active {
+	color: #FF9933;
+}
+
+#content {
+	position: absolute;
+	top: 5pt;
+	bottom: 5pt;
+	left: 5pt;
+	right: 5pt;
+}
+
+#exercise-list {
+	width: 150px;
+	float: left;
+}
+
+#selected-exercise {
+	position: absolute;
+	margin-left: 150px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	grid-template-rows: min-content auto min-content;
+}
+
+#selected-exercise iframe {
+	width: 99%;
+	height: 99%;
+}
+
+ul#header-links {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul#header-links li {
+	display: inline;
+	margin-right: 40px;
+}

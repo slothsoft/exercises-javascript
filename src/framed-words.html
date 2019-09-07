@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+<script src="resources/js/main.js"></script>
+<script src="resources/js/framed-words.js"></script>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="exercise-content">
+		<h2>Input</h2>
+		<textarea id="input" rows="4" cols="50">Hello
+World
+in
+a
+frame</textarea><br/> 
+		<button onclick="executeExercise()">Execute</button> 
+		<h2>Output</h2>
+		<textarea id="output" rows="6" cols="50">
+		</textarea> 
+	</div>
+
+<script>
+	const exercise = new FramedWordsExercise();
+	document.getElementById('header').innerHTML = createExerciseHeader(exercise);
+	
+	function executeExercise() {
+		var input = document.getElementById('input').value.split(/[\r\n]+/);
+		var result = exercise.execute(input);
+		document.getElementById('output').value = result.join("\n");
+	}
+	executeExercise();
+</script>
+	
+</body>
+</html>
