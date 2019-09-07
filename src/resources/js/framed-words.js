@@ -18,6 +18,5 @@ FramedWordsExercise.prototype.execute = function(input) {
 	});
 	result.push(result[0]);
 	return result;
-	
 };
 module.exports = FramedWordsExercise.prototype.execute;

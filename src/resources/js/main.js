@@ -47,12 +47,11 @@ function createExerciseHeader(exercise) {
 	var result = "<ul id='header-links'>";
 	if (exercise.source != null)
 		result += "<li><a href='" + exercise.source + "' target='_blank'>Exercise Source</a></li>";
-	result += "<li><a href='https://github.com/slothsoft/exercises-javascript/blob/master/src/resources/js/" + exercise.id + ".js'>Source Code</a></li>";
+	result += "<li><a href='http://github.com/slothsoft/exercises-javascript/blob/master/src/resources/js/" + exercise.id + ".js' target='_blank'>Source Code</a></li>";
 	result += "</ul>";
 	
-	result +=
-		"<h1>" + exercise.displayName + "</h1>" +
-		"<p>" + exercise.description + "</p>"; 
+	result += "<h1>" + exercise.displayName + "</h1>" +
+			  "<p>" + exercise.description + "</p>"; 
 	return result;
 }
 

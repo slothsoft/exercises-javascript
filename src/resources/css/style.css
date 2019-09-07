@@ -60,6 +60,10 @@ a:hover, a:active {
 	height: 99%;
 }
 
+#header-links {
+	border-bottom: 1px solid black;
+}
+
 ul#header-links {
 	list-style: none;
 	padding-left: 0;

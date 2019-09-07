@@ -11,7 +11,42 @@ QUnit.module("framed-words", function() {
 				"* in    *",
 				"* a     *",
 				"* frame *",
-				"*********"
+				"*********",
+		];
+		assert.deepEqual(result, expected);
+	});
+
+	QUnit.test("empty array", function(assert) {
+		// it's not really possible to input this, but still
+		var input = []; 
+		var result = functionUnderTest(input);
+		var expected = [
+			"****",
+			"****",
+		];
+		assert.deepEqual(result, expected);
+	});
+
+	QUnit.test("empty string", function(assert) {
+		// it's not really possible to input this, but still
+		var input = [ "" ]; 
+		var result = functionUnderTest(input);
+		var expected = [
+			"****",
+			"*  *",
+			"****",
+		];
+		assert.deepEqual(result, expected);
+	});
+
+	QUnit.test("single line", function(assert) {
+		// it's not really possible to input this, but still
+		var input = [ "Hello World!" ]; 
+		var result = functionUnderTest(input);
+		var expected = [
+			"****************",
+			"* Hello World! *",
+			"****************",
 		];
 		assert.deepEqual(result, expected);
 	});
