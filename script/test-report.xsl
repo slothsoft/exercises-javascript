@@ -92,6 +92,21 @@
 									<span class="time">
 										(<xsl:value-of select="@time" />s)
 									</span>
+									
+									<xsl:choose>
+										<xsl:when test="failure/actual">
+											<ul class="horizontal-list expected-actual">
+												<li><b>expected: </b><xsl:value-of select="failure/expected/@value" /></li>
+												<li><b>actual: </b><xsl:value-of select="failure/actual/@value" /></li>
+											</ul>
+										</xsl:when>
+										<xsl:when test="failure/@message">
+											<p class="expected-actual">
+												<b><xsl:value-of select="failure/@type" />: </b>
+												<xsl:value-of select="failure/@message" />
+											</p>
+										</xsl:when>
+									</xsl:choose>
 								</li>
 							</xsl:for-each>
 							</ul>

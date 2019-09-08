@@ -32,3 +32,6 @@ ul.testcases {
 	list-style: none;
 }
 
+.expected-actual {
+	margin-left: 15pt;
+}
