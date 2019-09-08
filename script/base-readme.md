@@ -6,6 +6,7 @@
 - **Repository:** <https://github.com/slothsoft/exercises-javascript>
 - **Open Issues:** <https://github.com/slothsoft/exercises-javascript/issues>
 - **Website:** [http://app.slothsoft.de](http://app.slothsoft.de/exercises-javascript)
+- **Test Report:** [http://app.slothsoft.de](http://app.slothsoft.de/exercises-javascript/test.html)
 
 A couple of programming exercises I thought would be fun to try.
 
@@ -18,6 +19,17 @@ It's not perfect yet (because still too much work), but for a new exercise do:
 1. Add the copied exercise file as a script to the _index.html_
 
 Or you can use the script `node script/create-new-exercise.js` which does everything but the last step for you. 
+
+
+
+## Test Report
+
+I'm really proud of my test report ([live version](http://app.slothsoft.de/exercises-javascript/test.html)):
+
+![test-report](readme/test-report.png)
+
+To see how it is generated see this _[XSL Transformation File](script/test-report.xsl)_ and this _[NodeJS generator](script/generate-test-report.js)_.
+
 
 
 ## Exercises

@@ -26,6 +26,7 @@ class ExerciseGui {
 		result += "<li><a href=\"" + window.location.pathname + "\"><b>Overview</b></a></li>";
 		result += "<li><a href=\"https://github.com/slothsoft/exercises-javascript/\"><b>GitHub</b></a></li>";
 		result += "<li><a href='" + window.location.pathname + "?exercise=random'><b>Random</b></a></li>";
+		result += "<li><a href='test.html'><b>Test Results</b></a></li>";
 		result += "<br>";
 		this.exercises.forEach(function(exercise) {
 			var a = "href=\"" + getExerciseUrl(exercise) + "\"";
