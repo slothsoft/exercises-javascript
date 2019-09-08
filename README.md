@@ -10,7 +10,16 @@
 
 A couple of programming exercises I thought would be fun to try.
 
-It's not perfect yet (because still too much work), but for a new exercise do:
+**Content:**
+- [New Exercise](#new-exercise)
+- [Exercises](#exercises)
+- [Test Report](#test-report)
+
+
+
+## New Exercise
+
+It's not perfect yet, but for a new exercise do:
 
 1. Create a new exercise in _src/exercise/<exercise>.js_
 1. Create the test in test/exercise/<exercise>-test.js_
@@ -22,6 +31,14 @@ Or you can use the script `node script/create-new-exercise.js` which does everyt
 
 
 
+## Exercises
+
+- **[Framed Words](http://app.slothsoft.de/exercises-javascript/?exercise=framed-words)** - Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
+- **[Pig Latin](http://app.slothsoft.de/exercises-javascript/?exercise=pig-latin)** - Write function that translates a text to Pig Latin and back.
+
+
+
+
 ## Test Report
 
 I'm really proud of my test report ([live version](http://app.slothsoft.de/exercises-javascript/test.html)):
@@ -29,10 +46,3 @@ I'm really proud of my test report ([live version](http://app.slothsoft.de/exerc
 ![test-report](readme/test-report.png)
 
 To see how it is generated see this _[XSL Transformation File](script/test-report.xsl)_ and this _[NodeJS generator](script/generate-test-report.js)_.
-
-
-
-## Exercises
-
-- **[Framed Words](http://app.slothsoft.de/exercises-javascript/?exercise=framed-words)** - Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
-- **[Pig Latin](http://app.slothsoft.de/exercises-javascript/?exercise=pig-latin)** - Write function that translates a text to Pig Latin and back.
