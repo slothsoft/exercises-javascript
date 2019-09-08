@@ -9,7 +9,11 @@ class ExerciseGui {
 	}
 	
 	createExerciseOverview() {
-		var result = "";
+		var result = "<ul id='header-links'>";
+		result += "<li><a href='https://github.com/slothsoft/exercises-javascript/'>GitHub</a></li>";
+		result += "<li><a href='" + window.location.pathname + "?exercise=random'>Random</a></li>";
+		result += "</ul>";
+		
 		this.exercises.forEach(function(exercise) {
 			result += "<a href=\"" + getExerciseUrl(exercise) + "\"><h2>" + exercise.getDisplayName() + "</h2></a>";
 			result += "<p>" + exercise.getShortDescription() + "</p>";
@@ -18,9 +22,10 @@ class ExerciseGui {
 	}
 
 	createExerciseList() {
-		var result = "<ul>";
+		var result = "<ul id='sidebar'>";
 		result += "<li><a href=\"" + window.location.pathname + "\"><b>Overview</b></a></li>";
 		result += "<li><a href=\"https://github.com/slothsoft/exercises-javascript/\"><b>GitHub</b></a></li>";
+		result += "<li><a href='" + window.location.pathname + "?exercise=random'><b>Random</b></a></li>";
 		result += "<br>";
 		this.exercises.forEach(function(exercise) {
 			var a = "href=\"" + getExerciseUrl(exercise) + "\"";
@@ -37,10 +42,19 @@ class ExerciseGui {
 				result = exercise;
 			}
 		});
-		return result == null ? createExercise(this.exercises[0]) : this.createExercise(result);
+		if (result == null) {
+			var randomIndex = Math.random() * this.exercises.length;
+			var exercise = this.exercises[Math.floor(randomIndex)];
+			var result = this.createExercise(exercise);
+			window.document.title = "Random Exercise"; 
+			return result;
+		}
+		return this.createExercise(result);
 	}
 
 	createExercise(exercise) {
+		window.document.title = exercise.getDisplayName();
+		
 		var result = "<ul id='header-links'>";
 		if (exercise.getSource() != null)
 			result += "<li><a href='" + exercise.getSource() + "'>Exercise Source</a></li>";

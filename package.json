@@ -7,7 +7,9 @@
     "copy-exercises": "copyfiles --up 1 src/exercise/*.js dist/",
     "watch": "watchify src/index.js -o dist/resources/js/application.js -v",
     "test": "qunit",
-    "deploy": "npm run test && npm run bundle"
+    "generate-readme": "node script/generate-readme.js",
+    "create-new-exercise": "node script/create-new-exercise.js",
+    "deploy": "npm run test && npm run bundle && npm run generate-readme && node script/deploy.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "butternut": "^0.4.6",
     "copyfiles": "^2.1.1",
+    "ftp-deploy": "^2.3.3",
     "qunit": "^2.9.2",
     "watchify": "^3.11.1"
   },

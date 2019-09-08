@@ -22,4 +22,4 @@ Or you can use the script `node script/create-new-exercise.js` which does everyt
 
 ## Exercises
 
-- **[Framed Words](http://app.slothsoft.de/exercises-javascript/?exercise=framed-words)** - Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
+<exercises>
