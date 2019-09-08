@@ -13,7 +13,7 @@ function executePigLatin(input) {
 function executePigLatinOnWord(input) {
 	const suffix = "ay";
 	var firstLetter = input.charAt(0);
-	var restOfWord = input.slice(1, input.length);
+	var restOfWord = input.slice(1);
 	if (restOfWord == "")
 		return firstLetter + suffix;
 	
@@ -21,7 +21,7 @@ function executePigLatinOnWord(input) {
 	var result = restOfWord + firstLetter.toLowerCase() + suffix;
 	
 	if (firstLetterCapital) {
-		result = result.charAt(0).toUpperCase() + result.slice(1, result.length);
+		result = result.charAt(0).toUpperCase() + result.slice(1);
 	}
 	return result;
 }

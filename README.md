@@ -35,6 +35,7 @@ Or you can use the script `node script/create-new-exercise.js` which does everyt
 
 - **[Framed Words](http://app.slothsoft.de/exercises-javascript/?exercise=framed-words)** - Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
 - **[Pig Latin](http://app.slothsoft.de/exercises-javascript/?exercise=pig-latin)** - Write function that translates a text to Pig Latin and back.
+- **[Spoon Language](http://app.slothsoft.de/exercises-javascript/?exercise=löffelsprache)** - The spoon language is the German pig latin. The language is based on the exchange of the vowels of a word by fixed abbreviations, whereby the consonants of the word remain untouched.
 
 
 

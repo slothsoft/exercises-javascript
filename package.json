@@ -6,7 +6,7 @@
     "bundle": "browserify src/index.js | squash > dist/resources/js/application.js && npm run copy-exercises",
     "copy-exercises": "copyfiles --up 1 src/exercise/*.js dist/",
     "watch": "watchify src/index.js -o dist/resources/js/application.js -v",
-    "test": "qunit && npm run generate-test-report",
+    "test": "qunit",
     "generate-readme": "node script/generate-readme.js",
     "generate-test-report": "node script/generate-test-report.js",
     "create-new-exercise": "node script/create-new-exercise.js",

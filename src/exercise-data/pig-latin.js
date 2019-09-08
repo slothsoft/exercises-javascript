@@ -5,7 +5,7 @@ class ExerciseImpl extends Exercise {
 	constructor() {
 		super('Pig Latin', 'Write function that translates a text to Pig Latin and back.');
 
-		this.id = "pig-latin";
+		this.id = 'pig-latin';
 		this.description = 'Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding "ay". "The quick brown fox" becomes "Hetay uickqay rownbay oxfay".';
 		this.source = "https://adriann.github.io/programming_problems.html"; 
 		this.script = 

@@ -15,5 +15,7 @@ QUnit.jUnitDone(function(report) {
 			return console.log(err);
 
 		console.log("Exported to file: " + xmlFile);
+		
+		require('../script/generate-test-report.js');
 	});
 });
