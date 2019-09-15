@@ -8,7 +8,6 @@
     "watch": "watchify src/index.js -o dist/resources/js/application.js -v",
     "test": "qunit",
     "generate-readme": "node script/generate-readme.js",
-    "generate-test-report": "node script/generate-test-report.js",
     "create-new-exercise": "node script/create-new-exercise.js",
     "deploy": "npm run test && npm run bundle && npm run generate-readme && node script/deploy.js"
   },
@@ -29,11 +28,11 @@
   },
   "homepage": "https://github.com/slothsoft/exercises-javascript/blob/master/README.md",
   "devDependencies": {
+    "@slothsoft/qunit-reporter": "^0.2.0",
     "butternut": "^0.4.6",
     "copyfiles": "^2.1.1",
     "ftp-deploy": "^2.3.3",
     "qunit": "^2.9.2",
-    "qunit-reporter-junit": "^1.1.1",
     "watchify": "^3.11.1",
     "xslt-processor": "^0.11.5"
   },

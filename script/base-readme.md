@@ -43,4 +43,4 @@ I'm really proud of my test report ([live version](http://app.slothsoft.de/exerc
 
 ![test-report](readme/test-report.png)
 
-To see how it is generated see this _[XSL Transformation File](script/test-report.xsl)_ and this _[NodeJS generator](script/generate-test-report.js)_.
+To see how it is generated see this _[XSL Transformation File](script/test-report.xsl)_ and this npm module _[`@slothsoft/qunit-reporter`](https://www.npmjs.com/package/@slothsoft/qunit-reporter)_.
