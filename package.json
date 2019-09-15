@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "A couple of programming exercises I thought would be fun to try.",
   "scripts": {
-    "bundle": "browserify src/index.js | squash > dist/resources/js/application.js && npm run copy-exercises",
-    "copy-exercises": "copyfiles --up 1 src/exercise/*.js dist/",
-    "watch": "watchify src/index.js -o dist/resources/js/application.js -v",
-    "test": "qunit",
+    "bundle": "browserify src/index.js | squash > docs/resources/js/application.js && npm run copy-exercises",
+    "copy-exercises": "copyfiles --up 1 src/exercise/*.js docs/",
+    "watch": "watchify src/index.js -o docs/resources/js/application.js -v",
+    "test-only": "qunit",
+    "test": "npm run test-only && npm run bundle && npm run generate-readme",
     "generate-readme": "node script/generate-readme.js",
-    "create-new-exercise": "node script/create-new-exercise.js",
-    "deploy": "npm run test && npm run bundle && npm run generate-readme && node script/deploy.js"
+    "create-new-exercise": "node script/create-new-exercise.js"
   },
   "repository": {
     "type": "git",

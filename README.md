@@ -5,8 +5,8 @@
 - **Author:** [Stef Schulz](mailto:s.schulz@slothsoft.de)
 - **Repository:** <https://github.com/slothsoft/exercises-javascript>
 - **Open Issues:** <https://github.com/slothsoft/exercises-javascript/issues>
-- **Website:** [http://app.slothsoft.de](http://app.slothsoft.de/exercises-javascript)
-- **Test Report:** [http://app.slothsoft.de](http://app.slothsoft.de/exercises-javascript/test.html)
+- **Website:** [Hosted on GitHub](https://slothsoft.github.io/exercises-javascript/)
+- **Test Report:** [Hosted on GitHub](https://slothsoft.github.io/exercises-javascript/test.html)
 
 A couple of programming exercises I thought would be fun to try.
 
@@ -33,17 +33,17 @@ Or you can use the script `node script/create-new-exercise.js` which does everyt
 
 ## Exercises
 
-- **[Framed Words](http://app.slothsoft.de/exercises-javascript/?exercise=framed-words)** - Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
-- **[Pig Latin](http://app.slothsoft.de/exercises-javascript/?exercise=pig-latin)** - Write function that translates a text to Pig Latin and back.
-- **[Spoon Language](http://app.slothsoft.de/exercises-javascript/?exercise=löffelsprache)** - The spoon language is the German pig latin. The language is based on the exchange of the vowels of a word by fixed abbreviations, whereby the consonants of the word remain untouched.
+- **[Framed Words](https://slothsoft.github.io/exercises-javascript/?exercise=framed-words)** - Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
+- **[Pig Latin](https://slothsoft.github.io/exercises-javascript/?exercise=pig-latin)** - Write function that translates a text to Pig Latin and back.
+- **[Spoon Language](https://slothsoft.github.io/exercises-javascript/?exercise=löffelsprache)** - The spoon language is the German pig latin. The language is based on the exchange of the vowels of a word by fixed abbreviations, whereby the consonants of the word remain untouched.
 
 
 
 
 ## Test Report
 
-I'm really proud of my test report ([live version](http://app.slothsoft.de/exercises-javascript/test.html)):
+I'm really proud of my test report ([live version](https://slothsoft.github.io/exercises-javascript/test.html)):
 
 ![test-report](readme/test-report.png)
 
-To see how it is generated see this _[XSL Transformation File](script/test-report.xsl)_ and this _[NodeJS generator](script/generate-test-report.js)_.
+To see how it is generated see this _[XSL Transformation File](script/test-report.xsl)_ and this npm module _[`@slothsoft/qunit-reporter`](https://www.npmjs.com/package/@slothsoft/qunit-reporter)_.

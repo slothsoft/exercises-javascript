@@ -5,8 +5,8 @@
 - **Author:** [Stef Schulz](mailto:s.schulz@slothsoft.de)
 - **Repository:** <https://github.com/slothsoft/exercises-javascript>
 - **Open Issues:** <https://github.com/slothsoft/exercises-javascript/issues>
-- **Website:** [http://app.slothsoft.de](http://app.slothsoft.de/exercises-javascript)
-- **Test Report:** [http://app.slothsoft.de](http://app.slothsoft.de/exercises-javascript/test.html)
+- **Website:** [Hosted on GitHub](https://slothsoft.github.io/exercises-javascript/)
+- **Test Report:** [Hosted on GitHub](https://slothsoft.github.io/exercises-javascript/test.html)
 
 A couple of programming exercises I thought would be fun to try.
 
@@ -39,7 +39,7 @@ Or you can use the script `node script/create-new-exercise.js` which does everyt
 
 ## Test Report
 
-I'm really proud of my test report ([live version](http://app.slothsoft.de/exercises-javascript/test.html)):
+I'm really proud of my test report ([live version](https://slothsoft.github.io/exercises-javascript/test.html)):
 
 ![test-report](readme/test-report.png)
 

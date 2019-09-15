@@ -14,7 +14,7 @@ function generateExercises() {
 	var exercises = require("../src/exercise-data.js");
 	exercises.forEach(function(exercise) {
 		result += "- **[" + exercise.getDisplayName() + "]";
-		result += "(http://app.slothsoft.de/exercises-javascript/?exercise=" + exercise.getId() + ")**";
+		result += "(https://slothsoft.github.io/exercises-javascript/?exercise=" + exercise.getId() + ")**";
 		result += " - " + exercise.getShortDescription();
 		result += "\n";
 	});
