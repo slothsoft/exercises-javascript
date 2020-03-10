@@ -41,9 +41,5 @@ class Exercise {
 	getScript() {
 		return this.script == null ? "" : this.script;
 	}
-
-	onLoad() {
-		// do nothing on default
-	}	
 }
 module.exports = Exercise;
