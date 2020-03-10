@@ -20,7 +20,7 @@ class ExerciseImpl extends Exercise {
 
 			document.getElementById("log").value = hangmanAi.getLog();
 			document.getElementById("summary").value =  
-				start.length + " letters long: " + start + " \\\n" +
+				start.length + " letters long: " + start + " \n" +
 				hangmanAi.guesses.length + " guesses: " + hangmanAi.guesses.join(", ");`; 
 		this.html = `<h2>Input</h2>
 			<select id="inputWords">`;
